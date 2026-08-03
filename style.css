@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 *,
 *:before,
 *:after {
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -12,4 +14,120 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --purple-50: hsl(260, 100%, 95%);
+  --purple-300: hsl(264, 82%, 80%);
+  --purple-500: hsl(263, 55%, 52%);
+  --white: hsl(0, 0%, 100%);
+  --grey-100: hsl(214, 17%, 92%);
+  --grey-200: hsl(0, 0%, 81%);
+  --grey-400: hsl(224, 10%, 45%);
+  --grey-500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+}
+
+body {
+  font-size: 13px;
+  background-color: var(--grey-100);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+main {
+  padding-inline: 1.5rem;
+  padding-block: 4rem;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+}
+
+.testimonial {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-block-end: 1rem;
+}
+
+.header > img {
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.2rem; */
+}
+
+.user-details .name {
+  font-weight: 600;
+}
+
+.user-details .status {
+  /* font-size: 0.8rem; */
+}
+
+.subject {
+  margin-block-end: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.subject,
+.description {
+  letter-spacing: 0.25px;
+}
+
+.testimonial:nth-child(1) {
+  background-color: var(--purple-500);
+  color: var(--purple-50);
+}
+.testimonial:nth-child(1) .status,
+.testimonial:nth-child(1) .description {
+  color: var(--purple-300);
+}
+.testimonial:nth-child(1) img {
+  border: 2px solid var(--purple-300);
+}
+
+.testimonial:nth-child(2) {
+  background-color: var(--grey-500);
+  color: var(--grey-100);
+}
+.testimonial:nth-child(2) .status,
+.testimonial:nth-child(2) .description {
+  color: var(--grey-200);
+}
+
+.testimonial:nth-child(3),
+.testimonial:nth-child(5) {
+  background-color: var(--white);
+  color: var(--grey-500);
+}
+.testimonial:nth-child(3) .status,
+.testimonial:nth-child(5) .status,
+.testimonial:nth-child(3) .description,
+.testimonial:nth-child(5) .description {
+  color: var(--grey-400);
+}
+
+.testimonial:nth-child(4) {
+  background-color: var(--dark-blue);
+  color: var(--grey-100);
+}
+.testimonial:nth-child(4) img {
+  border: 2px solid var(--purple-300);
+}
+.testimonial:nth-child(4) .status,
+.testimonial:nth-child(4) .description {
+  color: var(--grey-200);
 }
